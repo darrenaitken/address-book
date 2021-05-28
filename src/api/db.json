@@ -1,0 +1,84 @@
+{
+    "data" : [
+        {
+          "name": "John Doe",
+          "notes": "friend from school",
+          "location": {
+            "latitude": 50.9618428,
+            "longitude": -1.4261618
+          }
+        },
+        {
+          "name": "Jane Walker",
+          "notes": "family",
+          "location": {
+            "latitude": 50.9623807,
+            "longitude": -1.4213561
+          }
+        },
+        {
+          "name": "Adam West",
+          "notes": "a mysterious rich guy",
+          "location": {
+            "latitude": 54.977840,
+            "longitude": -1.612920
+          }
+        },
+        {
+          "name": "Sarah McCartney",
+          "notes": "Work colleague",
+          "location": {
+            "latitude": 53.410782,
+            "longitude": -2.977840
+          }
+        },
+        {
+          "name": "Michael Parsons",
+          "notes": "Dentist",
+          "location": {
+            "latitude": 53.957741,
+            "longitude": -1.082260
+          }
+        },
+        {
+          "name": "Bert Smith",
+          "notes": "friend from old job",
+          "location": {
+            "latitude": 40.741895,
+            "longitude": -73.989308
+          }
+        },
+        {
+          "name": "Claire Adams",
+          "notes": "Hairdresser",
+          "location": {
+            "latitude": 54.9058512,
+            "longitude": -1.3828727
+          }
+        },
+        {
+          "name": "Daniel Clemitson",
+          "notes": "Car Mechanic",
+          "location": {
+            "latitude": 54.9737318,
+            "longitude": -1.7635466
+          }
+        },
+        {
+          "name": "Eric Sanders",
+          "notes": "My old guitar tutor",
+          "location": {
+            "latitude": -33.8548157,
+            "longitude": 151.2164539
+          }
+        },
+        {
+          "name": "Zara Baggins",
+          "notes": "Dog Grooming / Walking",
+          "location": {
+            "latitude": 54.9058512,
+            "longitude": -1.3828727
+          }
+        }
+      ]
+}

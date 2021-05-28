@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 600px;
+  background-color: white;
+  color: black;
+  margin: 0 auto;
+}
+
+button.standard {
+  background-color: #2d7e7e;
+  border: 1px solid #2d7e7e;
+  color: white;
+  border-radius: 10px;
+  padding: 0 15px;
+  height: 30px;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.3s ease;
+}
+
+button.standard:hover {
+  background-color: #83eded;
+  color: black;
+  border: 1px solid #2d7e7e;
+}

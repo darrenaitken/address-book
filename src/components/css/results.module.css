@@ -1,0 +1,46 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: grid;
+  grid-template-areas: "name location notes";
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(247, 247, 247);
+  border: 1px solid lightgray;
+  min-height: 35px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+li:nth-child(odd) {
+  background-color: transparent;
+}
+
+li:hover {
+  background-color: #d9f8f8;
+  border: 1px solid #2d7e7e;
+}
+
+.list-name {
+  grid-area: name;
+  font-weight: bold;
+}
+
+.list-location {
+  grid-area: location;
+  font-size: smaller;
+}
+
+.list-notes {
+  grid-area: notes;
+  font-size: smaller;
+}
+
+mark {
+  background-color: #83eded;
+}

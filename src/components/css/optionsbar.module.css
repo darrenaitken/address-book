@@ -1,0 +1,27 @@
+.options-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #46baba;
+  min-height: 35px;
+  padding: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+input.options {
+  min-width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid #2d7e7e;
+  outline: none;
+  padding: 0 10px;
+  margin: 5px;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.3s ease;
+}
+
+input.options:hover {
+  border: 1px solid #83eded;
+}

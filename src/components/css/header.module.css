@@ -1,0 +1,31 @@
+header {
+  display: grid;
+  min-height: 75px;
+  grid-template-columns: 170px auto;
+  grid-template-areas:
+    "logo title"
+    "logo timestamp";
+  background-color: white;
+  border-bottom: 1px solid #318f8f;
+  padding: 5px 10px;
+}
+
+.logo {
+  grid-area: logo;
+  align-self: center;
+}
+
+.app-title {
+  grid-area: title;
+  align-self: center;
+  text-align: right;
+  font-size: 1.7rem;
+}
+
+.timestamp {
+  grid-area: timestamp;
+  align-self: center;
+  text-align: right;
+  color: darkgrey;
+  font-size: smaller;
+}

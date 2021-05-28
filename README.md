@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# === ADDRESS BOOK ===
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ABOUT
 
-## Available Scripts
+This is a prototype address book application build using JavaScript / React. This app is not production ready; it's simply available to showcase a small prototype demonstrating the underlying code with it.
 
-In the project directory, you can run:
+You need to install nodeJS in order to use this: https://nodejs.org.
+It is recommended to use VSCode to run these steps successfully: https://code.visualstudio.com
 
-### `yarn start`
+## INSTALLATION
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You must install everything locally first before you can run anything. The following installation steps only need to be completed once (unless a new app update has been uploaded to GitHub)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone this repo so the files are on your local computer.
+2. Open a new terminal in VSCode (Terminal > New Terminal)
+3. Run `npm install`. This will install all the dependencies required by this app.
 
-### `yarn test`
+You can now continue on the 'Getting started' section...
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## GETTING STARTED
 
-### `yarn build`
+## Step A
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Back end API (simulation)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+First we need to simulate that a back-end server is running so we can interact with data.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The json-server library (installed using `npm install`) will allow us to use data in the src/api/db.json file. This mocks a typical api endpoint.
 
-### `yarn eject`
+1. Open a new terminal in VSCode (Terminal > New Terminal)
+2. Run `npm run api` so that you can interact with a local API endpoint.
+3. Go to http://localhost:3030/data - you should see JSON data being returned (this is just to check that back end api is working).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Step B
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Front end react app
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Now you have the api running we can start the front end (this interacts with our back end api data).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Open another new terminal window (Terminal > New Terminal)
+5. Run `npm start` (this starts the front end application)
+6. Go to http://localhost:3000 - you should see the app
 
-## Learn More
+## TESTING
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Testing is completed using cypress.io. This simulates a user using the front end (clicking on things, inputting values, etc)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Prior to running the tests, make sure you have both the api running (complete Step A points 1-3, shown above) and also the front end app (Step B points 4-6, also explained above).
 
-### Code Splitting
+1. Open another new terminal window (Terminal > New Terminal)
+2. Run `npm test` (this will start cypress - a new window should pop up showing you a list of integration tests)
+3. Click on the test (standard test link) to run the tests - you will see on the left what the tests do and if they passed or failed
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## DESIGN ARCHITECTURE
 
-### Analyzing the Bundle Size
+The entry point to the application is index.js, which will render the content calculated by App.jsx.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The main state of the app is stored within App.jsx with other child components having their own states if required. The states are stored as objects - they work the same way as individual state values, except the object properties are altered.
 
-### Making a Progressive Web App
+The component hierarchy of the application is as follows:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Public/index.html
+└ src/index.js
+└ App
+└ ToastContainer
+└ Details
+└ Field
+└ Header
+└ OptionsBar
+└ Content
+└ Results
+└ Footer
 
-### Advanced Configuration
+# FOLDER STRUCTURE AND NOTEABLE FILES
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+cypress (testing files)
 
-### Deployment
+public (anything that can be accessed by third parties is placed here)
+└ index.html (our landing page which is opened by the server, which in turn runs src/index.js)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+src
+└ api (folder contains our fake JSON data for our contact api)
+└ components (where all our parent components of our app are located as well as various subfolders listed below)
+└ common (components that could be used by other main elements)
+└ css (css modules that are used by all components to render certain styles. css file names match component files)
+└ images (static images used by our application)
+└ js (javascript only files. A location for generic or shared code)
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+index.js (Our entry point JavaScript file, which in turn calls src/components/App.jsx)

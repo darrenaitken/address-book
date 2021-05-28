@@ -1,0 +1,4 @@
+{
+    "apiURL" : "http://localhost:3030/data",
+    "apiGeoURL" : "https://api.bigdatacloud.net/data/reverse-geocode-client"
+}

@@ -1,0 +1,74 @@
+/* Form */
+.inputContainer {
+  display: grid;
+  grid-template-areas: "label field tick";
+  grid-template-columns: 80px 200px 20px;
+}
+
+.textAreaContainer {
+  display: grid;
+  grid-template-areas: "label field tick";
+  grid-template-columns: 80px 200px 20px;
+}
+
+label {
+  grid-area: label;
+  align-self: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: smaller;
+  min-width: 80px;
+}
+
+.textAreaContainer label {
+  align-self: start;
+}
+
+input.inputField {
+  grid-area: field;
+  align-self: center;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid #2d7e7e;
+  outline: none;
+  padding: 0 10px;
+  margin: 5px;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.3s ease;
+}
+
+textarea.textAreafield {
+  grid-area: field;
+  resize: none;
+  border-radius: 10px;
+  border: 1px solid #2d7e7e;
+  outline: none;
+  padding: 10px;
+  margin: 5px;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.3s ease;
+}
+
+textarea::-webkit-scrollbar {
+  width: 13px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: rgb(226, 226, 226);
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 10px;
+}
+
+input.inputField:hover,
+textarea.textAreafield:hover {
+  border: 1px solid #83eded;
+}
+
+.imgTick {
+  grid-area: tick;
+  width: 16px;
+  margin-top: 13px;
+}

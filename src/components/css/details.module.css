@@ -1,0 +1,98 @@
+/* The Modal (background) */
+.modalBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Modal Content */
+.modalBox {
+  position: absolute;
+  max-width: 500px;
+  top: 12vh;
+}
+
+/* Top Bar */
+.modalTopBar {
+  background-color: #46baba;
+  padding: 5px;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Standard content */
+.modalBody {
+  background-color: white;
+  padding: 10px 10px;
+  min-height: 200px;
+  border-radius: 0 0 5px 5px;
+}
+
+/* The Close Button */
+.modalButtonClose {
+  display: flex;
+  height: 35px;
+  width: 35px;
+  margin-left: auto;
+  margin-right: 0;
+  background-color: #2d7e7e;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalButtonClose:hover,
+.modalButtonClose:focus {
+  background-color: #83eded;
+  color: black;
+}
+
+.hide {
+  display: none;
+}
+
+/* Form */
+form.details {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+button.details {
+  background-color: #2d7e7e;
+  border: 1px solid #2d7e7e;
+  outline: none;
+  color: white;
+  border-radius: 10px;
+  padding: 0 15px;
+  height: 35px;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+button.disabled {
+  background-color: #e8e6e6;
+  border: 1px solid #555555;
+  color: #555555;
+  cursor: not-allowed;
+}
+
+button.details:not(.disabled):hover {
+  background-color: #83eded;
+  color: black;
+  border: 1px solid #2d7e7e;
+}
