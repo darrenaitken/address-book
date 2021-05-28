@@ -1,4 +1,4 @@
-## === ADDRESS BOOK ===
+### === ADDRESS BOOK ===
 
 ### ABOUT
 
@@ -59,31 +59,31 @@ The main state of the app is stored within App.jsx with other child components h
 
 The component hierarchy of the application is as follows:
 
-Public/index.html
-└ src/index.js
-└ App
-└ ToastContainer
-└ Details
-└ Field
-└ Header
-└ OptionsBar
-└ Content
-└ Results
-└ Footer
+Public/index.html <br />
+└ src/index.js <br />
+└ App <br />
+└ ToastContainer <br />
+└ Details <br />
+└ Field <br />
+└ Header <br />
+└ OptionsBar <br />
+└ Content <br />
+└ Results <br />
+└ Footer <br />
 
 ### FOLDER STRUCTURE AND NOTEABLE FILES
 
 cypress (testing files)
 
-public (anything that can be accessed by third parties is placed here)
+public (anything that can be accessed by third parties is placed here) <br />
 └ index.html (our landing page which is opened by the server, which in turn runs src/index.js)
 
-src
-└ api (folder contains our fake JSON data for our contact api)
-└ components (where all our parent components of our app are located as well as various subfolders listed below)
-└ common (components that could be used by other main elements)
-└ css (css modules that are used by all components to render certain styles. css file names match component files)
-└ images (static images used by our application)
-└ js (javascript only files. A location for generic or shared code)
+src <br />
+└ api (folder contains our fake JSON data for our contact api) <br />
+└ components (where all our parent components of our app are located as well as various subfolders listed below) <br />
+└ common (components that could be used by other main elements) <br />
+└ css (css modules that are used by all components to render certain styles. css file names match component files) <br />
+└ images (static images used by our application) <br />
+└ js (javascript only files. A location for generic or shared code) <br />
 
 index.js (Our entry point JavaScript file, which in turn calls src/components/App.jsx)
